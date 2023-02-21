@@ -1,0 +1,170 @@
+body  {
+  margin: auto 0;
+  padding-top: 60px;
+  background: rgb(2, 114, 2);
+}
+
+.header-container {
+  background-color: black;
+  color: goldenrod;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.header-container .left-container {
+  padding-left: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.header-container li  {
+  list-style: none;
+  padding: 0px 10px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.header-container .right-container  {
+  display: flex;
+}
+
+.right-container .first-section {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.first-section img {
+  margin-right: 10px;
+  border-radius: 20px;
+  width: 2rem;
+}
+
+.first-section .first-section-tooltip {
+  background-color: rgb(79, 78, 78);
+  padding: 5px 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  position: absolute;
+  bottom: -40px;
+  left: -80px;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.first-section:hover .first-section-tooltip {
+  opacity: 1;
+}
+
+.second-section img {
+  width: 2.5rem;
+}
+
+.second-section {
+  margin-left: 10px;
+  background-color: goldenrod;
+  padding: 0px 3px;
+
+  display: flex;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section .section-1  {
+  padding: 30px;
+  background: url(black-img.jpg) no-repeat center center fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h2  {
+  color: goldenrod;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+section p {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section .cards-text,
+section .sum-text,
+section .start-text {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+section button  {
+  border: none;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  background-color: goldenrod;
+  color: rgb(4, 91, 4);
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: all linear 0.15s;
+}
+
+section button:hover  {
+  background-color: rgb(4, 91, 4);
+  color: goldenrod;
+}
+
+section .start-button {
+  padding: 8px 20px;
+}
+
+section .new-button {
+  padding: 8px 27px;
+}
+
+footer  {
+  background-color: black;
+  color: goldenrod;
+  height: 20px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer ul {
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer li {
+  list-style: none;
+  padding: 0px 5px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

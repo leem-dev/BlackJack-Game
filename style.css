@@ -1,0 +1,111 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #eee;
+}
+
+.stage {
+  background: #fff;
+  width: 560px;
+  margin: 2em auto;
+  border: 15px solid #333;
+  box-shadow: 1px 4px 11px #aaa, inset 1px 3px 6px #ccc;
+  padding: 1em 0 3em;
+  position: relative;
+}
+
+.stage-content {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-top: 56.25%;
+  background: url(https://games.washingtonpost.com/arenaxstorage-blob/arenax-games/BlackJack/0.58/build/resources/assets/thumbs/secondary-thumb2x.jpg) no-repeat;
+
+  position: relative;
+}
+
+.stage-content:after {
+  content: "email: alabiTseleem@gmail.com";
+  text-transform: uppercase;
+  transform: translateY(0.5em);
+  font-size: 1em;
+
+  position: absolute;
+  bottom: -40px;
+  left: 100px; 
+}
+
+.curtain-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.curtain-panel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.curtain-panel .curtain {
+  width: 50%;
+  background-color: goldenrod;
+  position: relative;
+  transition: transform 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.curtain-panel .curtain:before {
+  content: attr(data-title);
+  text-align: center;
+  width: 200%;
+  position: absolute;
+  top: 50%;
+  line-height: 0;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 3px #ccc;
+}
+
+.curtain-panel .left-curtain:before {
+  left: 0;
+}
+
+.curtain-panel .right-curtain:before {
+  right: 0;
+}
+
+.curtain-panel .curtain:after {
+  content: '';
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 10px -5px, rgba(0, 0, 0, 0) 12px, #fff 13px);
+  display: block;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.curtain-trigger {
+  visibility: hidden;
+  position: absolute;
+}
+
+.curtain-trigger:checked ~ .left-curtain {
+  transform: translateX(calc(-100% + 2em));
+}
+
+.curtain-trigger:checked ~ .right-curtain {
+  transform: translateX(calc(100% - 2em));
+}
+
+.game-link  {
+  
+  display: flex;
+  justify-content: center;
+}
